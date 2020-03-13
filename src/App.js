@@ -5,13 +5,16 @@ function App() {
 
   const [cardArray, setCardArray] = useState([0,1,2]);
 
-  const addCard = () => {
-      cardArray.push(cardArray.length);
-      setCardArray(cardArray);
-      console.log(cardArray);
-    };
+  // const addCard = () => {
+      // cardArray.push(0);
+      // console.log([...cardArray, cardArray.length]);
+      // console.log(cardArray);
+      // setCardArray([...cardArray, cardArray.length]);
+      // console.log(cardArray);
+      // setCardArray(2);
+    // };
 
-  const counter = [0,1,2];
+  // const counter = [0,1,2];
 
   return (
     <div className="App">
@@ -27,24 +30,16 @@ function App() {
             className="ButtonAdd button button-default" 
             aria-label="Add new card"
             title="Add new card"
-            onClick={() => addCard()}
+            onClick={() => setCardArray([...cardArray, cardArray.length])}
             >+</button>
 
           {/* A retro card (retrospective item) */}
           <div className="RetroCard" aria-label="Retro card">
             {/* User input */}
-            {cardArray.map((item, idx) => {
-              return (
-                <textarea 
-                  key={`card-${idx}`}
-                  className="textbox" 
-                  placeholder="Enter text here" 
-                  aria-label="Enter text here"
-                  rows={item}
-                  defaultValue="Here is an example card">
-                </textarea>
-                );
+            {cardArray.map((card, index) => {
+              return <p>test{card}</p>
             })}
+           
           </div>
         </div>
       </div>
