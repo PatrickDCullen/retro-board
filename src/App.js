@@ -37,7 +37,14 @@ function App() {
           <div className="RetroCard" aria-label="Retro card">
             {/* User input */}
             {cardArray.map((card, index) => {
-              return <p>test{card}</p>
+              return <textarea
+                key={`card-${index}`}
+                className="textbox" 
+                placeholder="Enter text here" 
+                aria-label="Enter text here"
+                rows="1"
+                value="Enter your input here">
+                </textarea>
             })}
            
           </div>
