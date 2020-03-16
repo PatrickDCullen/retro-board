@@ -40,7 +40,10 @@ function App() {
                     <button type="button" className="button button-left" title="Move left">
                       <img src="angleLeft.svg" alt="Move left" width="12" height="12"/>
                     </button>
-                    <button type="button" className="button button-delete" title="Delete">
+                    <button type="button" className="button button-delete" title="Delete" onClick={() => {
+                      const filteredArray = cardArray.filter((card, currentIndex) => currentIndex !== index);
+                      setCardArray(filteredArray);
+                    }}>
                       <img src="timesCircle.svg" alt="Delete" width="12" height="12"/>
                     </button>
                     <div>
