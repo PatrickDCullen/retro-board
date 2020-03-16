@@ -1,5 +1,10 @@
 import React, {Fragment, useState} from 'react';
 import './App.css';
+import angleLeft from './angleLeft.svg';
+import angleRight from './angleRight.svg';
+import timesCircle from './timesCircle.svg';
+import thumbsUp from './thumbsUp.svg';
+import thumbsDown from './thumbsDown.svg';
 
 function App() {
 
@@ -41,13 +46,13 @@ function App() {
 
                   <div className="button-group" >
                     <button type="button" className="button button-left" title="Move left">
-                      <img src="angleLeft.svg" alt="Move left" width="12" height="12"/>
+                      <img src={angleLeft} alt="Move left" width="12" height="12"/>
                     </button>
                     <button type="button" className="button button-delete" title="Delete" onClick={() => {
                       const filteredArray = cardArray.filter((card, currentIndex) => currentIndex !== index);
                       setCardArray(filteredArray);
                     }}>
-                      <img src="timesCircle.svg" alt="Delete" width="12" height="12"/>
+                      <img src={timesCircle} alt="Delete" width="12" height="12"/>
                     </button>
                     <div>
                       <button type="button" className="button button-left" title="Like" onClick={() => {
@@ -56,7 +61,7 @@ function App() {
                         cardArrayCopy[index]["likes"]++;
                         setCardArray(cardArrayCopy);
                       }}>
-                        <img src="thumbsUp.svg" alt="Like" width="12" height="12"/> {card["likes"]}
+                        <img src={thumbsUp} alt="Like" width="12" height="12"/> {card["likes"]}
                       </button>
                       <button type="button" className="button button-left" title="Dislike" onClick={() => {
                         const cardArrayCopy = [...cardArray];
@@ -64,10 +69,10 @@ function App() {
                         cardArrayCopy[index]["dislikes"]++;
                         setCardArray(cardArrayCopy);
                       }}>
-                        <img src="thumbsDown.svg" alt="Dislike" width="12" height="12"/> {card["dislikes"]}
+                        <img src={thumbsDown} alt="Dislike" width="12" height="12"/> {card["dislikes"]}
                       </button>
                       <button type="button" className="button button-right" title="Move right">
-                        <img src="angleRight.svg" alt="Move right" width="12" height="12"/>
+                        <img src={angleRight} alt="Move right" width="12" height="12"/>
                       </button>
                     </div>
                   </div>
