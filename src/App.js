@@ -23,6 +23,16 @@ function App() {
     }
   }
 
+  const handleLeftArrow = (card, index) => {
+    const cardArrayCopy = [...cardArray];
+    if (categories.indexOf(card["category"]) === 0) {
+      cardArrayCopy[index]["category"] = categories[categories.length - 1];
+      setCardArray(cardArrayCopy);
+    } else {
+      cardArrayCopy[index]["category"] = categories[categories.indexOf(card["category"]) - 1];
+      setCardArray(cardArrayCopy);
+    }
+  }
   return (
     <div className="App">
       {/* The class "row" is for the layout changer */}
@@ -60,7 +70,7 @@ function App() {
                     }}></textarea>
 
                   <div className="button-group" >
-                    <button type="button" className="button button-left" title="Move left">
+                    <button type="button" className="button button-left" title="Move left" onClick={() => handleLeftArrow(card, index)}>
                       <img src={angleLeft} alt="Move left" width="12" height="12"/>
                     </button>
                     <button type="button" className="button button-delete" title="Delete" onClick={() => {
@@ -122,7 +132,7 @@ function App() {
                     }}></textarea>
 
                   <div className="button-group" >
-                    <button type="button" className="button button-left" title="Move left">
+                    <button type="button" className="button button-left" title="Move left" onClick={() => handleLeftArrow(card, index)}>
                       <img src={angleLeft} alt="Move left" width="12" height="12"/>
                     </button>
                     <button type="button" className="button button-delete" title="Delete" onClick={() => {
@@ -183,7 +193,7 @@ function App() {
                     }}></textarea>
 
                   <div className="button-group" >
-                    <button type="button" className="button button-left" title="Move left">
+                    <button type="button" className="button button-left" title="Move left" onClick={() => handleLeftArrow(card, index)}>
                       <img src={angleLeft} alt="Move left" width="12" height="12"/>
                     </button>
                     <button type="button" className="button button-delete" title="Delete" onClick={() => {
