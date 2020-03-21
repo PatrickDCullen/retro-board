@@ -73,26 +73,25 @@ function App() {
             </button>
 
             {/* A retro card (retrospective item) */}
-            <div className="RetroCard" aria-label="Retro card">
-              {/* User input */}
-              {cardArray.map((card, index) => {
-                if (card["category"] === "wentWell") {
-                  return (
-                    <Cards
-                      index={index}
-                      cardArray={cardArray}
-                      setCardArray={setCardArray}
-                      handleLeftArrow={handleLeftArrow}
-                      handleRightArrow={handleRightArrow}
-                      card={card}
-                      deleteCards={deleteCards}
-                    />
-                  );
-                } else {
-                  return null;
-                }
-              })}
-            </div>
+
+            {/* User input */}
+            {cardArray.map((card, index) => {
+              if (card["category"] === "wentWell") {
+                return (
+                  <Cards
+                    index={index}
+                    cardArray={cardArray}
+                    setCardArray={setCardArray}
+                    handleLeftArrow={handleLeftArrow}
+                    handleRightArrow={handleRightArrow}
+                    card={card}
+                    deleteCards={deleteCards}
+                  />
+                );
+              } else {
+                return null;
+              }
+            })}
           </div>
 
           {/* Retro category */}
@@ -118,26 +117,25 @@ function App() {
             </button>
 
             {/* A retro card (retrospective item) */}
-            <div className="RetroCard" aria-label="Retro card">
-              {/* User input */}
-              {cardArray.map((card, index) => {
-                if (card["category"] === "toImprove") {
-                  return (
-                    <Cards
-                      index={index}
-                      cardArray={cardArray}
-                      setCardArray={setCardArray}
-                      handleLeftArrow={handleLeftArrow}
-                      handleRightArrow={handleRightArrow}
-                      card={card}
-                      deleteCards={deleteCards}
-                    />
-                  );
-                } else {
-                  return null;
-                }
-              })}
-            </div>
+
+            {/* User input */}
+            {cardArray.map((card, index) => {
+              if (card["category"] === "toImprove") {
+                return (
+                  <Cards
+                    index={index}
+                    cardArray={cardArray}
+                    setCardArray={setCardArray}
+                    handleLeftArrow={handleLeftArrow}
+                    handleRightArrow={handleRightArrow}
+                    card={card}
+                    deleteCards={deleteCards}
+                  />
+                );
+              } else {
+                return null;
+              }
+            })}
           </div>
 
           {/* Retro category */}
@@ -163,26 +161,25 @@ function App() {
             </button>
 
             {/* A retro card (retrospective item) */}
-            <div className="RetroCard" aria-label="Retro card">
-              {/* User input */}
-              {cardArray.map((card, index) => {
-                if (card["category"] === "actionItems") {
-                  return (
-                    <Cards
-                      index={index}
-                      cardArray={cardArray}
-                      setCardArray={setCardArray}
-                      handleLeftArrow={handleLeftArrow}
-                      handleRightArrow={handleRightArrow}
-                      card={card}
-                      deleteCards={deleteCards}
-                    />
-                  );
-                } else {
-                  return null;
-                }
-              })}
-            </div>
+
+            {/* User input */}
+            {cardArray.map((card, index) => {
+              if (card["category"] === "actionItems") {
+                return (
+                  <Cards
+                    index={index}
+                    cardArray={cardArray}
+                    setCardArray={setCardArray}
+                    handleLeftArrow={handleLeftArrow}
+                    handleRightArrow={handleRightArrow}
+                    card={card}
+                    deleteCards={deleteCards}
+                  />
+                );
+              } else {
+                return null;
+              }
+            })}
           </div>
         </div>
       </main>
