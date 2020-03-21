@@ -40,16 +40,9 @@ function App() {
 
   return (
     <div className="App">
-      {/* The class "row" is for the layout changer */}
-      <main className="content row">
+      <main className="content">
         <h1>Retro Board</h1>
-        {/* Layout changer */}
-        <div>
-          Layout &nbsp;<button className="button button-default">Column</button>
-        </div>
-
-        {/* The className "row" is for the layout changer */}
-        <div className="RetroApp row">
+        <div className="RetroApp">
           {/* Retro category */}
           <div className="RetroCategory RetroCategory-1">
             <h2>Went Well</h2>

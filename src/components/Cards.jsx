@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
-import angleLeft from "../angleLeft.svg";
-import angleRight from "../angleRight.svg";
-import timesCircle from "../timesCircle.svg";
-import thumbsUp from "../thumbsUp.svg";
-import thumbsDown from "../thumbsDown.svg";
+import angleLeft from "../assets/angleLeft.svg";
+import angleRight from "../assets/angleRight.svg";
+import timesCircle from "../assets/timesCircle.svg";
+import thumbsUp from "../assets/thumbsUp.svg";
+import thumbsDown from "../assets/thumbsDown.svg";
 
 function Cards(props) {
   return (
