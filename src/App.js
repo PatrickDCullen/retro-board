@@ -29,6 +29,14 @@ function App() {
       setCardArray(cardArrayCopy);
     }
   };
+
+  const deleteCards = index => {
+    const filteredArray = cardArray.filter(
+      (card, currentIndex) => currentIndex !== index
+    );
+    setCardArray(filteredArray);
+  };
+
   return (
     <div className="App">
       {/* The class "row" is for the layout changer */}
@@ -77,6 +85,7 @@ function App() {
                       handleLeftArrow={handleLeftArrow}
                       handleRightArrow={handleRightArrow}
                       card={card}
+                      deleteCards={deleteCards}
                     />
                   );
                 } else {
@@ -121,6 +130,7 @@ function App() {
                       handleLeftArrow={handleLeftArrow}
                       handleRightArrow={handleRightArrow}
                       card={card}
+                      deleteCards={deleteCards}
                     />
                   );
                 } else {
@@ -165,6 +175,7 @@ function App() {
                       handleLeftArrow={handleLeftArrow}
                       handleRightArrow={handleRightArrow}
                       card={card}
+                      deleteCards={deleteCards}
                     />
                   );
                 } else {

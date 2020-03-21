@@ -34,12 +34,7 @@ function Cards(props) {
           type="button"
           className="button button-delete"
           title="Delete"
-          onClick={() => {
-            const filteredArray = props.cardArray.filter(
-              (card, currentIndex) => currentIndex !== props.index
-            );
-            props.setCardArray(filteredArray);
-          }}
+          onClick={() => props.deleteCards(props.index)}
         >
           <img src={timesCircle} alt="Delete" width="12" height="12" />
         </button>
