@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Cards from "./components/Cards";
+import AddCardButton from "./components/AddCardButton";
 
 function App() {
   const [cardArray, setCardArray] = useState([]);
@@ -53,24 +54,11 @@ function App() {
           <div className="RetroCategory RetroCategory-1">
             <h2>Went Well</h2>
             {/* Add a new card button */}
-            <button
-              type="button"
-              className="ButtonAdd button button-default"
-              aria-label="Add new card"
-              title="Add new card"
-              onClick={() => {
-                setCardArray(
-                  cardArray.concat({
-                    category: "wentWell",
-                    text: "",
-                    likes: 0,
-                    dislikes: 0
-                  })
-                );
-              }}
-            >
-              +
-            </button>
+            <AddCardButton
+              category="wentWell"
+              setCardArray={setCardArray}
+              cardArray={cardArray}
+            />
 
             {/* A retro card (retrospective item) */}
 
@@ -97,24 +85,11 @@ function App() {
           {/* Retro category */}
           <div className="RetroCategory RetroCategory-2">
             <h2>To Improve</h2>
-            <button
-              type="button"
-              className="ButtonAdd button button-default"
-              aria-label="Add new card"
-              title="Add new card"
-              onClick={() => {
-                setCardArray(
-                  cardArray.concat({
-                    category: "toImprove",
-                    text: "",
-                    likes: 0,
-                    dislikes: 0
-                  })
-                );
-              }}
-            >
-              +
-            </button>
+            <AddCardButton
+              category="toImprove"
+              setCardArray={setCardArray}
+              cardArray={cardArray}
+            />
 
             {/* A retro card (retrospective item) */}
 
@@ -141,24 +116,11 @@ function App() {
           {/* Retro category */}
           <div className="RetroCategory RetroCategory-3">
             <h2>Action Items</h2>
-            <button
-              type="button"
-              className="ButtonAdd button button-default"
-              aria-label="Add new card"
-              title="Add new card"
-              onClick={() => {
-                setCardArray(
-                  cardArray.concat({
-                    category: "actionItems",
-                    text: "",
-                    likes: 0,
-                    dislikes: 0
-                  })
-                );
-              }}
-            >
-              +
-            </button>
+            <AddCardButton
+              category="actionItems"
+              setCardArray={setCardArray}
+              cardArray={cardArray}
+            />
 
             {/* A retro card (retrospective item) */}
 
