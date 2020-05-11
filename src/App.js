@@ -31,7 +31,7 @@ function App() {
     }
   };
 
-  const deleteCards = index => {
+  const deleteCards = (index) => {
     const filteredArray = cardArray.filter(
       (card, currentIndex) => currentIndex !== index
     );
@@ -69,8 +69,6 @@ function App() {
                     deleteCards={deleteCards}
                   />
                 );
-              } else {
-                return null;
               }
             })}
           </div>
@@ -100,8 +98,6 @@ function App() {
                     deleteCards={deleteCards}
                   />
                 );
-              } else {
-                return null;
               }
             })}
           </div>
@@ -131,8 +127,6 @@ function App() {
                     deleteCards={deleteCards}
                   />
                 );
-              } else {
-                return null;
               }
             })}
           </div>

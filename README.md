@@ -2,7 +2,12 @@
 
 This project is a simple retrospective board UI like those used in Scrum. It allows the user to add a card to any of three categories, and each card can have its own text, its own upvotes and downvotes, and can be moved to any another column.
 
-The purpose of this project is to showcase proficiency in React, specifically the use of props, the State hook and lifting state.
+The purpose of this project is to showcase proficiency in React, specifically
+the use of props, the State hook and lifting state.
+
+## Demo
+
+![Brief Demo](retro-board-demo.gif)
 
 ## Getting Started
 
